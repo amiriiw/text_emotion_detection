@@ -2,9 +2,9 @@
 
 ---
 
-this project is for detect the emotion of input text.
+This project is for detect the emotion of input text.
 
-#### in this project we use below librarys: 
+#### in this project we use below libraries: 
 
 - tranformers
 - torch
@@ -23,4 +23,4 @@ this project is for detect the emotion of input text.
 
 ### offer: 
 
-read the md files to know why we use that librarys.
+Read the md files to get good information about the libraries used.
