@@ -19,6 +19,7 @@ This project is for detect the emotion of input text.
 
 2- after first step run the text-emotion-detector.py file to see how program work.
 
+---
 
 ### offer: 
 
