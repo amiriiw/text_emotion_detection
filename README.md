@@ -1,4 +1,4 @@
-# text-emotion-detection
+# text_emotion_detection
 This project is for detect the emotion of input text.
 
 #### in this project we use below libraries: 
