@@ -1,5 +1,5 @@
 # text_emotion_detection
-This project is for detect the emotion of input text.
+This basic project is for detect the emotion of input text.
 
 #### in this project we use below libraries: 
 <a href="https://github.com/maskiiw"><img alt="pytorch" src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=f5f5f5"></a>
