@@ -9,10 +9,14 @@ This basic project is for detect the emotion of input text.
 <a href="https://github.com/amiriiw"><img alt="matplotlib" src="https://img.shields.io/badge/matplotlib-00945E?style=for-the-badge"></a>
 
 ## How you should use the src:
-1- at first you should train the dataset in text-emotion-model-trainer.py file 
+**waring: its good to read the src one time by your self.**
+
+1- at first download the dataset from https://drive.google.com/drive/folders/1qY25-g_HVWJDs7Lzq5mxdDg50-wbF0Up?usp=sharing
+
+2- after download the dataset you should train the dataset in text_emotion_model_trainer.py file 
   - point: if you dont have strong system train the model in colab or jupyter.
 
-2- after first step run the text-emotion-detector.py file to see how program work.
+3- after the train dataset run the text_emotion_detector.py file to see how program work.
 
 ### offer: 
 Read the md files to get good information about the libraries used.
