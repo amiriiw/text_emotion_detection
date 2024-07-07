@@ -7,6 +7,7 @@ This basic project is for detect the emotion of input text.
 <a href="https://github.com/amiriiw"><img alt="tranformers" src="https://img.shields.io/badge/tranformers-A6CE39?style=for-the-badge"></a>
 <a href="https://github.com/amiriiw"><img alt="collections" src="https://img.shields.io/badge/collections-5B4638?style=for-the-badge"></a>
 <a href="https://github.com/amiriiw"><img alt="matplotlib" src="https://img.shields.io/badge/matplotlib-00945E?style=for-the-badge"></a>
+<a href="https://github.com/amiriiw"><img alt="PyQt5" src="https://img.shields.io/badge/PyQt5-7C4EC4?style=for-the-badge"></a>
 
 ## How you should use the src:
 **waring: its good to read the src one time by your self.**
