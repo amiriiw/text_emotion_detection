@@ -62,7 +62,7 @@ To use this project, follow these steps:
 
     ```bash
     git clone https://github.com/amiriiw/text_emotion_detection
-    cd text-emotion-detection
+    cd text_emotion_detection
     ```
 
 2. Install the required libraries:
