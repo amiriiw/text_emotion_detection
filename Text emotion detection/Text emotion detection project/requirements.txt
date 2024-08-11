@@ -1,8 +1,0 @@
-sys
-PyQt5
-torch
-numpy
-pandas
-matpilotlib
-collections
-transformers
