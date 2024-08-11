@@ -50,6 +50,12 @@ This script uses the trained model to predict emotions from user input and store
     - The user inputs text, which is tokenized and passed through the model.
     - The predicted emotion is stored in the database, and the user is informed of the detected emotion.
 
+### Dataset
+
+You can download the datasets used for training from the following links:
+
+- [Dataset 1](https://drive.google.com/drive/folders/1cN4jA771DYQvLEATApjSx3YdpPVgZiUx?usp=sharing)
+
 ## Installation and Setup
 
 To use this project, follow these steps:
