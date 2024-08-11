@@ -54,7 +54,7 @@ This script uses the trained model to predict emotions from user input and store
 
 You can download the datasets used for training from the following links:
 
-- [Dataset 1](https://drive.google.com/drive/folders/1cN4jA771DYQvLEATApjSx3YdpPVgZiUx?usp=sharing)
+- [Dataset](https://drive.google.com/drive/folders/1cN4jA771DYQvLEATApjSx3YdpPVgZiUx?usp=sharing)
 
 ## Installation and Setup
 
