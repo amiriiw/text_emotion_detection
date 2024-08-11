@@ -1,23 +1,86 @@
-# text_emotion_detection
-This basic project is for detect the emotion of input text.
+# Text Emotion Detection Project
 
-#### in this project we use below libraries: 
-<a href="https://github.com/amiriiw"><img alt="pytorch" src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=f5f5f5"></a>
-<a href="https://github.com/amiriiw"><img alt="pandas" src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=f5f5f5"></a>
-<a href="https://github.com/amiriiw"><img alt="tranformers" src="https://img.shields.io/badge/tranformers-A6CE39?style=for-the-badge"></a>
-<a href="https://github.com/amiriiw"><img alt="collections" src="https://img.shields.io/badge/collections-5B4638?style=for-the-badge"></a>
-<a href="https://github.com/amiriiw"><img alt="matplotlib" src="https://img.shields.io/badge/matplotlib-00945E?style=for-the-badge"></a>
-<a href="https://github.com/amiriiw"><img alt="PyQt5" src="https://img.shields.io/badge/PyQt5-7C4EC4?style=for-the-badge"></a>
+Welcome to the **Text Emotion Detection Project**! This project is designed to train a model for detecting emotions in text using the Transformers library and PyTorch, and then use that model to classify emotions in real-time and store the results in an SQLite database.
 
-## How you should use the src:
-**waring: its good to read the src one time by your self.**
+## Overview
 
-1- at first download the dataset from https://drive.google.com/drive/folders/1qY25-g_HVWJDs7Lzq5mxdDg50-wbF0Up?usp=sharing
+This project consists of two main components:
 
-2- after download the dataset you should train the dataset in text_emotion_model_trainer.py file 
-  - point: if you dont have strong system train the model in colab or jupyter.
+1. **text_emotion_model_trainer.py**: This script is responsible for training a BERT-based model to classify text into one of seven emotions: fear, joy, sadness, anger, surprise, neutral, or disgust.
+2. **text_emotion_detector.py**: This script uses the trained model to predict emotions from user input and stores the results in an SQLite database.
 
-3- after the train dataset run the text_emotion_detector.py file to see how program work.
+## Libraries Used
 
-### offer: 
-Read the md files to get good information about the libraries used.
+The following libraries are used in this project:
+
+- **[torch](https://pytorch.org/docs/stable/index.html)**: PyTorch, an open-source machine learning library for Python, is used for model training and inference.
+- **[pandas](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html)**: Pandas is used for handling the dataset and loading the data.
+- **[transformers](https://huggingface.co/docs/transformers/index)**: The Transformers library by Hugging Face provides the pre-trained BERT model and tokenizer used in this project.
+- **[sqlite3](https://docs.python.org/3/library/sqlite3.html)**: The SQLite3 module is used for creating and interacting with a local SQLite database to store detected emotions.
+
+## Detailed Explanation
+
+### `text_emotion_model_trainer.py`
+
+This script is the backbone of the project, responsible for training the emotion detection model. The key components of the script are:
+
+- **CustomDataset Class**: This class inherits from PyTorch's Dataset class and is used to preprocess the text data. It tokenizes the text, encodes the labels, and prepares the data for model training.
+- **TextEmotionDetector Class**: This class sets up the BERT model and the training pipeline. It includes functions to load the dataset, initialize the model, and perform training.
+- **train() Function**: This function iterates through the dataset, performs forward passes, computes loss, and updates the model weights.
+- **save_model() Function**: After training, this function saves the trained model to a specified directory for later use.
+
+### `text_emotion_detector.py`
+
+This script uses the trained model to predict emotions from user input and stores the results in an SQLite database. The key components of the script are:
+
+- **TextEmotionSQLite Class**: This class handles model loading, emotion prediction, and database interactions.
+- **predict_emotion() Function**: This function tokenizes the input text, performs emotion prediction using the loaded model, and stores the result in the SQLite database.
+- **setup_emotion_table() Function**: This function creates an SQLite table (if it doesn't already exist) to store text and the corresponding detected emotion.
+- **close_connection() Function**: This function closes the connection to the SQLite database.
+
+### How It Works
+
+1. **Model Training**:
+    - The `text_emotion_model_trainer.py` script reads a CSV file containing text data and corresponding emotion labels.
+    - The text is tokenized using the BERT tokenizer, and the model is trained on this data.
+    - The trained model is saved for later use.
+
+2. **Emotion Detection**:
+    - The `text_emotion_detector.py` script loads the trained model and sets up an SQLite database to store the results.
+    - The user inputs text, which is tokenized and passed through the model.
+    - The predicted emotion is stored in the database, and the user is informed of the detected emotion.
+
+## Installation and Setup
+
+To use this project, follow these steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/amiriiw/text-emotion-detection.git
+    cd text-emotion-detection
+    ```
+
+2. Install the required libraries:
+
+    ```bash
+    pip install torch pandas transformers
+    ```
+
+3. Prepare your dataset (a CSV file with columns 'Clean_Text' and 'Emotion').
+
+4. Run the model training script:
+
+    ```bash
+    python text_emotion_model_trainer.py
+    ```
+
+5. Use the trained model for emotion detection:
+
+    ```bash
+    python text_emotion_detector.py
+    ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
