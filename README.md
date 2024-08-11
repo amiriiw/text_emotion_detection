@@ -52,9 +52,7 @@ This script uses the trained model to predict emotions from user input and store
 
 ### Dataset
 
-You can download the datasets used for training from the following links:
-
-- [Dataset](https://drive.google.com/drive/folders/1cN4jA771DYQvLEATApjSx3YdpPVgZiUx?usp=sharing)
+The dataset used for training the model can be accessed via this [Dataset](https://drive.google.com/drive/folders/1cN4jA771DYQvLEATApjSx3YdpPVgZiUx?usp=sharing)
 
 ## Installation and Setup
 
@@ -63,7 +61,7 @@ To use this project, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/amiriiw/text-emotion-detection.git
+    git clone https://github.com/amiriiw/text_emotion_detection
     cd text-emotion-detection
     ```
 
