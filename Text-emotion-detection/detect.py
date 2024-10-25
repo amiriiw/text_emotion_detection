@@ -66,11 +66,11 @@ class TextEmotionPostgreSQL:
 
 if __name__ == "__main__":
     db_params = DBParams(
-        dbname='textdb',
-        user='test',
-        password='1001',
-        host='localhost',
-        port='5432'
+        dbname='database name',
+        user='user name',
+        password='password',
+        host='host',
+        port='port'
     )
 
     db_interface = TextEmotionPostgreSQL(model_path="./", db_params=db_params)
