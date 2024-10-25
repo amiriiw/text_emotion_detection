@@ -1,0 +1,4 @@
+torch
+pandas
+psycopg2
+transformers
